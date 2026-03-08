@@ -1,4 +1,4 @@
-# Modul 3 – Tabel HTML
+# Modul 2 – Tabel HTML
 
 ## Deskripsi
 Pada modul ini dibuat halaman web yang menampilkan data mahasiswa dalam bentuk tabel menggunakan HTML. Tahapan yang dilakukan meliputi pembuatan struktur tabel, penambahan heading kolom, serta pengisian data mahasiswa ke dalam baris tabel.
@@ -114,4 +114,5 @@ Berikut adalah keseluruhan kode dari file `table.html`:
 
 ## Hasil
 Halaman web berhasil menampilkan tabel mahasiswa dengan tiga kolom yaitu No, Nama, dan NIM. Tabel ditampilkan di tengah halaman dengan garis border yang terlihat jelas pada setiap sel.
+
 
