@@ -21,6 +21,3 @@ Mengisi tabel dengan data mahasiswa seperti Religita dan Jeno beserta NIM masing
 
 # Hasil
 Halaman web berhasil menampilkan tabel mahasiswa yang berisi nomor, nama, dan NIM.
-
-![SS 1](ss-1.png)
-
