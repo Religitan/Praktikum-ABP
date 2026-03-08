@@ -1,31 +1,28 @@
-Modul 3 - HTML
-Deskripsi
+# Modul 2 - HTML
 
-Pada modul ini dilakukan pembuatan halaman web sederhana menggunakan HTML untuk menampilkan data mahasiswa dalam bentuk tabel.
+# Deskripsi
+Pada modul ini dipelajari dasar-dasar HTML (HyperText Markup Language) yang digunakan untuk membangun struktur halaman web. HTML berfungsi untuk menampilkan berbagai elemen seperti teks, heading, tabel, gambar, hyperlink, serta form pada halaman web.
 
-HTML
+Tools yang digunakan: 
+- HTML
+- Text Editor (VS Code / Notepad++)
+- Web Browser
 
-Text Editor (VS Code / Notepad++)
+# Langkah-langkah
 
-Web Browser
+# 1. Membuat File HTML
+Membuat file HTML baru dengan struktur dasar HTML seperti <!DOCTYPE html>, <html>, <head>, dan <body>.
 
-Langkah-langkah
-1. Membuat File HTML
+# 2. Menambahkan Judul Halaman
+Menambahkan judul halaman menggunakan tag <h1> dengan teks "Tabel Mahasiswa".
 
-Membuat file HTML baru dengan struktur dasar seperti <!DOCTYPE html>, <html>, <head>, dan <body>.
-
-2. Menambahkan Judul Halaman
-
-Menambahkan judul halaman menggunakan tag <h2> dengan teks Tabel Mahasiswa.
-
-3. Membuat Tabel Mahasiswa
-
+# 3. Membuat Tabel Mahasiswa
 Membuat tabel menggunakan tag <table> dengan kolom No, Nama, dan NIM menggunakan tag <th> dan <td>.
 
-4. Menambahkan Data Mahasiswa
-
+# 4. Menambahkan Data Mahasiswa
 Mengisi tabel dengan data mahasiswa seperti Religita dan Jeno beserta NIM masing-masing.
 
-Hasil
-
+# Hasil
 Halaman web berhasil menampilkan tabel mahasiswa yang berisi nomor, nama, dan NIM.
+
+![SS 1](ss-1.png)
