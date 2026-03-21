@@ -1,17 +1,61 @@
-# Modul 5 – Ramadan Mubarak dengan Bootstrap Modal (THR)
+<div align="center">
+  <br />
+  <h1>LAPORAN PRAKTIKUM <br>APLIKASI BERBASIS PLATFORM</h1>
+  <br />
+  <h2>MODUL 5 <br>BOOTSTRAP MODAL (THR)</h2>
+  <br />
+  <br />
+  <img src="Logo_Telkom.png" alt="Logo Telkom" width="300">
+  <br />
+  <br />
+  <br />
+  <h3>Disusun Oleh :</h3>
+  <p>
+    <strong>Reli Gita Nurhidayati</strong><br>
+    <strong>2311102025</strong><br>
+    <strong>S1 IF-11-REG 01</strong>
+  </p>
+  <br />
+  <h3>Dosen Pengampu :</h3>
+  <p>
+    <strong>Dimas Fanny Hebrasianto Permadi, S.ST., M.Kom</strong>
+  </p>
+  <br />
+  <br />
+  <h4>Asisten Praktikum :</h4>
+  <strong>Apri Pandu Wicaksono</strong><br>
+  <strong>Rangga Pradarrell Fathi</strong>
+  <br /><br />
+  <h2>LABORATORIUM HIGH PERFORMANCE
+  <br>FAKULTAS INFORMATIKA
+  <br>UNIVERSITAS TELKOM PURWOKERTO
+  <br>2026</h2>
+</div>
 
-## Deskripsi
-Pada modul ini dilakukan pengembangan lanjutan dari halaman Ramadan Mubarak dengan menambahkan fitur interaktif menggunakan komponen Modal dari Bootstrap 5. Ketika tombol "Ambil THR" diklik, akan muncul sebuah modal yang menampilkan pesan selamat mendapatkan THR. Seluruh tampilan tetap dibangun menggunakan class Bootstrap tanpa mengandalkan native CSS secara penuh.
+---
+
+# 1. Dasar Teori
+
+**Bootstrap Modal** adalah komponen interaktif dari Bootstrap 5 yang digunakan untuk menampilkan konten di atas halaman utama dalam bentuk jendela pop-up. Modal sangat berguna untuk menampilkan informasi tambahan, konfirmasi aksi, atau form tanpa harus berpindah halaman.
+
+Komponen Modal Bootstrap terdiri dari tiga bagian utama yaitu `modal-header` untuk judul, `modal-body` untuk isi konten, dan `modal-footer` untuk tombol aksi. Modal memerlukan **Bootstrap JS Bundle** agar dapat berfungsi secara interaktif, karena JavaScript digunakan untuk mengatur tampilkan dan sembunyikan modal saat tombol diklik.
+
+---
+
+# 2. Bootstrap Modal (THR)
+
+Pada modul ini dilakukan pengembangan lanjutan dari halaman Ramadan Mubarak dengan menambahkan fitur interaktif menggunakan komponen Modal dari Bootstrap 5. Ketika tombol "Ambil THR" diklik, akan muncul sebuah modal yang menampilkan pesan selamat mendapatkan THR.
 
 Tools yang digunakan dalam praktikum ini antara lain:
-- Visual Studio Code
-- Google Chrome
-- HTML
-- Bootstrap 5
+- **Visual Studio Code**
+- **Google Chrome**
+- **HTML**
+- **Bootstrap 5**
 
-## Langkah-langkah
+---
 
-### 1. Menambahkan Bootstrap JS CDN
+## Langkah 1 : Menambahkan Bootstrap JS CDN
+
 Karena komponen Modal Bootstrap memerlukan JavaScript untuk berfungsi, Bootstrap JS Bundle ditambahkan di bagian bawah tag `<body>` sebelum tag penutupnya:
 ```html
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -19,8 +63,11 @@ Karena komponen Modal Bootstrap memerlukan JavaScript untuk berfungsi, Bootstrap
 
 Bootstrap JS Bundle sudah mencakup Popper.js di dalamnya sehingga tidak perlu memanggil library tambahan secara terpisah.
 
-### 2. Menambahkan Tombol "Ambil THR"
-Tombol ditambahkan di dalam hero section tepat di bawah paragraf deskripsi. Tombol menggunakan class `btn btn-warning btn-lg shadow` dan dua atribut Bootstrap untuk memicu modal yaitu `data-bs-toggle` dan `data-bs-target`:
+---
+
+## Langkah 2 : Menambahkan Tombol "Ambil THR"
+
+Tombol ditambahkan di dalam hero section tepat di bawah paragraf deskripsi. Tombol menggunakan atribut `data-bs-toggle` dan `data-bs-target` untuk memicu modal:
 ```html
 <button class="btn btn-warning btn-lg shadow" data-bs-toggle="modal" data-bs-target="#thrModal">
     Ambil THR 🎁
@@ -29,8 +76,11 @@ Tombol ditambahkan di dalam hero section tepat di bawah paragraf deskripsi. Tomb
 
 Atribut `data-bs-toggle="modal"` memberi tahu Bootstrap bahwa tombol ini akan membuka sebuah modal, sedangkan `data-bs-target="#thrModal"` menunjuk ke elemen modal dengan id `thrModal` yang akan ditampilkan.
 
-### 3. Membuat Komponen Modal
-Modal dibuat menggunakan struktur komponen Bootstrap yang terdiri dari tiga bagian utama yaitu `modal-header`, `modal-body`, dan `modal-footer`. Atribut `data-bs-dismiss="modal"` digunakan pada tombol close dan tombol Alhamdulillah agar modal dapat ditutup kembali:
+---
+
+## Langkah 3 : Membuat Komponen Modal
+
+Modal dibuat menggunakan struktur komponen Bootstrap yang terdiri dari tiga bagian utama yaitu `modal-header`, `modal-body`, dan `modal-footer`:
 ```html
 <div class="modal fade" id="thrModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
@@ -61,7 +111,10 @@ Modal dibuat menggunakan struktur komponen Bootstrap yang terdiri dari tiga bagi
 
 Class `modal-dialog-centered` digunakan agar modal muncul di tengah layar secara vertikal, dan class `fade` memberikan efek animasi saat modal dibuka maupun ditutup.
 
-### 4. Full Code
+---
+
+## Langkah 4 : Full Code
+
 Berikut adalah keseluruhan kode dari file `thr.html`:
 ```html
 <!DOCTYPE html>
@@ -105,7 +158,6 @@ Berikut adalah keseluruhan kode dari file `thr.html`:
         <p class="lead mb-4">
             Semoga bulan suci ini membawa keberkahan, kedamaian, dan kebahagiaan bagi kita semua.
         </p>
-
         <!-- BUTTON THR -->
         <button class="btn btn-warning btn-lg shadow" data-bs-toggle="modal" data-bs-target="#thrModal">
             Ambil THR 🎁
@@ -185,5 +237,8 @@ Berikut adalah keseluruhan kode dari file `thr.html`:
 </html>
 ```
 
-## Hasil
+---
+
+# 3. Hasil
+
 Halaman web berhasil menampilkan tombol "Ambil THR 🎁" di hero section. Ketika tombol diklik, modal Bootstrap muncul di tengah layar dengan animasi fade menampilkan pesan "Anda mendapatkan THR!" berwarna hijau. Modal dapat ditutup menggunakan tombol silang di sudut kanan atas maupun tombol "Alhamdulillah" di bagian bawah modal.
