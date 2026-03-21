@@ -1,68 +1,136 @@
-# CodeIgniter 4 Application Starter
+<div align="center">
+  <br />
+  <h1>LAPORAN PRAKTIKUM <br>APLIKASI BERBASIS PLATFORM</h1>
+  <br />
+  <h2>MODUL 7 <br>TUGAS 2 - WEB CRUD MANAJEMEN PRODUK</h2>
+  <br />
+  <br />
+  <img src="Logo_Telkom.png" alt="Logo Telkom" width="300">
+  <br />
+  <br />
+  <br />
+  <h3>Disusun Oleh :</h3>
+  <p>
+    <strong>Reli Gita Nurhidayati</strong><br>
+    <strong>2311102025</strong><br>
+    <strong>S1 IF-11-REG 01</strong>
+  </p>
+  <br />
+  <h3>Dosen Pengampu :</h3>
+  <p>
+    <strong>Dimas Fanny Hebrasianto Permadi, S.ST., M.Kom</strong>
+  </p>
+  <br />
+  <br />
+  <h4>Asisten Praktikum :</h4>
+  <strong>Apri Pandu Wicaksono</strong><br>
+  <strong>Rangga Pradarrell Fathi</strong>
+  <br /><br />
+  <h2>LABORATORIUM HIGH PERFORMANCE
+  <br>FAKULTAS INFORMATIKA
+  <br>UNIVERSITAS TELKOM PURWOKERTO
+  <br>2026</h2>
+</div>
 
-## What is CodeIgniter?
+---
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+# 1. Dasar Teori
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+**CodeIgniter 4** adalah framework PHP berbasis MVC (Model-View-Controller) yang ringan dan cepat untuk membangun aplikasi web dinamis. Framework ini menyediakan struktur yang terorganisir sehingga memudahkan pengembangan aplikasi secara terstruktur.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+**MVC (Model-View-Controller)** adalah pola arsitektur perangkat lunak yang memisahkan aplikasi menjadi tiga komponen utama. Model bertugas mengelola data dan logika bisnis, View bertugas menampilkan data kepada pengguna, dan Controller bertugas menjadi penghubung antara Model dan View.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+**jQuery DataTables** adalah plugin jQuery yang digunakan untuk menambahkan fitur interaktif pada tabel HTML seperti pencarian data, pagination, dan pengurutan kolom secara otomatis. Data yang ditampilkan pada tabel menggunakan format **JSON** yang diambil dari server melalui AJAX.
 
-## Installation & updates
+**Bootstrap 5** adalah framework CSS yang digunakan untuk mempercepat pembuatan tampilan web yang responsif dan modern. **SweetAlert2** adalah jQuery plugin yang digunakan untuk menampilkan dialog konfirmasi yang lebih menarik dibandingkan dialog bawaan browser.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+---
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+# 2. Tugas Praktikum - Web CRUD Manajemen Produk
 
-## Setup
+Pada tugas ini dibuat sebuah aplikasi web untuk mengelola data produk menggunakan framework CodeIgniter 4 dengan database MySQL. Aplikasi memiliki 3 halaman fungsional yaitu halaman tabel data, halaman form tambah produk, dan halaman form edit produk.
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+Teknologi yang digunakan dalam tugas ini antara lain:
+- **PHP** dengan Framework **CodeIgniter 4**
+- **MySQL** sebagai database
+- **Bootstrap 5** sebagai framework CSS
+- **jQuery** dan **jQuery DataTables**
+- **SweetAlert2** sebagai jQuery plugin
+- **JSON** sebagai format data pada DataTables
 
-## Important Change with index.php
+---
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+# 3. Fitur Sistem
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+Sistem yang dibangun memiliki fitur-fitur sebagai berikut:
+- Halaman tabel data produk dengan jQuery DataTables (JSON)
+- Halaman form tambah produk
+- Halaman form edit produk
+- Fitur hapus data dengan konfirmasi SweetAlert2
+- Fitur pencarian (search) pada tabel
+- Pagination pada tabel
+- CRUD lengkap (Create, Read, Update, Delete)
+- Koneksi database MySQL menggunakan CodeIgniter Model
 
-**Please** read the user guide for a better explanation of how CI4 works!
+---
 
-## Repository Management
+# 4. Struktur Folder
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+Berikut adalah struktur folder dari project:
+```
+manajemen-produk/
+├── app/
+│   ├── Config/
+│   │   ├── Database.php
+│   │   └── Routes.php
+│   ├── Controllers/
+│   │   └── ProdukController.php
+│   ├── Models/
+│   │   └── ProdukModel.php
+│   └── Views/
+│       └── produk/
+│           ├── layout.php
+│           ├── index.php
+│           └── form.php
+├── public/
+├── vendor/
+└── writable/
+```
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+---
 
-## Server Requirements
+# 5. Cara Menjalankan Program
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+Berikut adalah langkah-langkah untuk menjalankan program:
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+1. Pastikan **XAMPP** sudah terinstall
+2. Buka **XAMPP Control Panel** → Start **Apache** dan **MySQL**
+3. Buka **phpMyAdmin** → buat database `manajemen_produk`
+4. Jalankan query berikut untuk membuat tabel:
+```sql
+CREATE TABLE produk (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    kategori VARCHAR(50) NOT NULL,
+    harga DECIMAL(10,2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+5. Buka **CMD** → arahkan ke folder project:
+```
+cd C:\xampp\htdocs\manajemen-produk
+```
+6. Jalankan server:
+```
+php spark serve
+```
+7. Buka browser → akses:
+```
+http://localhost:8080/index.php/produk
+```
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+---
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+# 6. Kesimpulan
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Aplikasi web Manajemen Produk berhasil dibangun menggunakan framework CodeIgniter 4 dengan menerapkan pola arsitektur MVC. Aplikasi memiliki fungsionalitas CRUD yang lengkap dengan tampilan Bootstrap 5 yang responsif. Data produk ditampilkan menggunakan jQuery DataTables dengan format JSON sehingga tampilan tabel menjadi lebih interaktif. Fitur konfirmasi hapus data menggunakan SweetAlert2 sebagai implementasi jQuery plugin sesuai dengan spesifikasi teknis yang diberikan.
