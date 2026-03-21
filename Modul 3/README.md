@@ -1,17 +1,61 @@
-# Modul 3 – HTML & CSS
+<div align="center">
+  <br />
+  <h1>LAPORAN PRAKTIKUM <br>APLIKASI BERBASIS PLATFORM</h1>
+  <br />
+  <h2>MODUL 3 <br>HTML & CSS</h2>
+  <br />
+  <br />
+  <img src="Logo_Telkom.png" alt="Logo Telkom" width="300">
+  <br />
+  <br />
+  <br />
+  <h3>Disusun Oleh :</h3>
+  <p>
+    <strong>Reli Gita Nurhidayati</strong><br>
+    <strong>2311102025</strong><br>
+    <strong>S1 IF-11-REG 01</strong>
+  </p>
+  <br />
+  <h3>Dosen Pengampu :</h3>
+  <p>
+    <strong>Dimas Fanny Hebrasianto Permadi, S.ST., M.Kom</strong>
+  </p>
+  <br />
+  <br />
+  <h4>Asisten Praktikum :</h4>
+  <strong>Apri Pandu Wicaksono</strong><br>
+  <strong>Rangga Pradarrell Fathi</strong>
+  <br /><br />
+  <h2>LABORATORIUM HIGH PERFORMANCE
+  <br>FAKULTAS INFORMATIKA
+  <br>UNIVERSITAS TELKOM PURWOKERTO
+  <br>2026</h2>
+</div>
 
-## Deskripsi
+---
+
+# 1. Dasar Teori
+
+**CSS (Cascading Style Sheets)** adalah bahasa yang digunakan untuk mengatur tampilan dan gaya dari elemen-elemen HTML pada halaman web. Dengan CSS, tampilan halaman web dapat disesuaikan mulai dari warna, ukuran, posisi, hingga animasi.
+
+CSS dapat dituliskan langsung di dalam file HTML menggunakan tag `<style>` di dalam bagian `<head>`, atau disimpan dalam file terpisah dengan ekstensi `.css`. Salah satu fitur CSS yang sering digunakan adalah **animasi**, yang dibuat menggunakan `@keyframes` untuk mendefinisikan perubahan tampilan dari satu kondisi ke kondisi lainnya secara bertahap.
+
+---
+
+# 2. HTML & CSS
+
 Pada modul ini dibuat halaman web bertema Tahun Baru Imlek menggunakan HTML dan CSS. Tahapan yang dilakukan meliputi pembuatan struktur halaman, penerapan styling dengan CSS, serta penggunaan animasi CSS untuk membuat efek lampion bergoyang dan confetti jatuh.
 
 Tools yang digunakan dalam praktikum ini antara lain:
-- Visual Studio Code
-- Google Chrome
-- HTML
-- CSS
+- **Visual Studio Code**
+- **Google Chrome**
+- **HTML**
+- **CSS**
 
-## Langkah-langkah
+---
 
-### 1. Membuat File HTML
+## Langkah 1 : Membuat File HTML
+
 Langkah pertama adalah membuat file baru dengan nama `imlek.html`, kemudian menuliskan struktur dasar HTML sebagai kerangka halaman web:
 ```html
 <!DOCTYPE html>
@@ -26,7 +70,10 @@ Langkah pertama adalah membuat file baru dengan nama `imlek.html`, kemudian menu
 
 Struktur ini berfungsi sebagai kerangka dasar yang wajib ada pada setiap halaman HTML.
 
-### 2. Menambahkan Styling Background dan Teks
+---
+
+## Langkah 2 : Menambahkan Styling Background dan Teks
+
 Di dalam tag `<head>`, ditambahkan tag `<style>` untuk mengatur tampilan halaman. Background menggunakan `linear-gradient` dengan warna merah bertingkat, dan seluruh konten diposisikan di tengah menggunakan Flexbox:
 ```css
 body {
@@ -52,7 +99,10 @@ p {
 
 Property `text-shadow` digunakan untuk menghasilkan efek cahaya keemasan pada judul halaman.
 
-### 3. Membuat Animasi Lampion
+---
+
+## Langkah 3 : Membuat Animasi Lampion
+
 Elemen lampion dibuat menggunakan `<div>` dengan class `.lampion`. Bentuk bulat dibuat menggunakan `border-radius: 50%`, tali lampion dibuat menggunakan pseudo-element `::after`, dan animasi goyang dibuat menggunakan `@keyframes`:
 ```css
 .lampion {
@@ -85,7 +135,10 @@ Elemen lampion dibuat menggunakan `<div>` dengan class `.lampion`. Bentuk bulat 
 
 Animasi `goyang` membuat lampion berayun secara bergantian dari kiri ke kanan dengan durasi 3 detik secara terus-menerus.
 
-### 4. Membuat Animasi Confetti
+---
+
+## Langkah 4 : Membuat Animasi Confetti
+
 Efek confetti emas dibuat menggunakan `<div>` dengan class `.confetti` yang dianimasikan jatuh dari atas ke bawah layar menggunakan `translateY`:
 ```css
 .confetti {
@@ -103,7 +156,10 @@ Efek confetti emas dibuat menggunakan `<div>` dengan class `.confetti` yang dian
 
 Nilai `100vh` digunakan agar confetti jatuh hingga mencapai batas bawah layar.
 
-### 5. Menambahkan Konten ke Body
+---
+
+## Langkah 5 : Menambahkan Konten ke Body
+
 Di dalam tag `<body>`, ditambahkan elemen lampion, judul, teks, dan confetti:
 ```html
 <div class="lampion lampion1"></div>
@@ -120,7 +176,10 @@ Di dalam tag `<body>`, ditambahkan elemen lampion, judul, teks, dan confetti:
 
 Lima elemen confetti ditempatkan di posisi horizontal yang berbeda agar tersebar merata di seluruh lebar halaman.
 
-### 6. Full Code
+---
+
+## Langkah 6 : Full Code
+
 Berikut adalah keseluruhan kode dari file `imlek.html`:
 ```html
 <!DOCTYPE html>
@@ -200,5 +259,8 @@ Berikut adalah keseluruhan kode dari file `imlek.html`:
 </html>
 ```
 
-## Hasil
+---
+
+# 3. Hasil
+
 Halaman web berhasil menampilkan tampilan bertema Imlek dengan background merah gradient, judul bercahaya emas, dua lampion yang beranimasi berayun di kiri dan kanan, serta efek confetti emas yang jatuh dari atas layar.
